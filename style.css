@@ -554,3 +554,184 @@ a {
         text-align: center;
     }
 }
+/* --- Blog Section (Archive Style) --- */
+.blog {
+    padding: 100px 0;
+    background: var(--bg);
+    border-top: 1px solid rgba(69, 26, 3, 0.05);
+}
+
+.blog-archive {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(69, 26, 3, 0.1);
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr;
+    align-items: flex-start;
+    gap: 2rem;
+    transition: var(--transition);
+}
+
+.blog-card:last-child {
+    border-bottom: none;
+}
+
+.blog-card__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.blog-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.blog-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.blog-card__title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: var(--accent-dark);
+    transition: var(--transition);
+}
+
+.blog-card__excerpt {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: var(--transition);
+}
+
+.blog-card:hover .blog-card__title {
+    color: var(--primary);
+    transform: translateX(10px);
+}
+
+.blog-card:hover .blog-card__excerpt {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.blog-card__more {
+    grid-column: 2;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* --- About Section (DNA Scheme) --- */
+.about {
+    padding: 120px 0;
+    background: #fff;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.about__text {
+    margin: 2rem 0;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.methodology-info {
+    padding: 2rem;
+    background: #fdfaf7;
+    border-left: 4px solid var(--primary);
+    border-radius: 0 16px 16px 0;
+    min-height: 160px;
+}
+
+.methodology-info__title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.methodology-info__desc {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.about__visual {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.dna-scheme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dna-node {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    border: 2px solid rgba(69, 26, 3, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--accent-dark);
+    position: relative;
+    z-index: 2;
+}
+
+.dna-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    opacity: 0.3;
+}
+
+.dna-node:hover,
+.dna-node.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(109, 40, 217, 0.3);
+    transform: scale(1.15);
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+    .blog-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .blog-card__excerpt {
+        opacity: 1;
+        transform: none;
+    }
+
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
