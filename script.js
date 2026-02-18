@@ -88,3 +88,25 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroScene();
     lucide.createIcons();
 });
+// --- Interactive Case Cards ---
+const initCaseHover = () => {
+    const cards = document.querySelectorAll('.case-card');
+    cards.forEach(card => {
+        const originalBg = 'var(--white)';
+        const hoverBg = card.getAttribute('data-bg');
+
+        card.addEventListener('mouseenter', () => {
+            // Плавная смена фона самой карточки через CSS переход
+            card.style.backgroundColor = hoverBg;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.backgroundColor = originalBg;
+        });
+    });
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+    // ... предыдущие инициализации
+    initCaseHover();
+});
