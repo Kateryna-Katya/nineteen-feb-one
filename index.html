@@ -249,6 +249,72 @@
         </div>
     </div>
 </section>
+<section class="contact" id="contact">
+    <div class="container contact__grid">
+        <div class="contact__info">
+            <span class="badge">Связь</span>
+            <h2 class="section-title">Бесплатная консультация по всем вопросам</h2>
+            <p class="contact__text">
+                Платформа уже доступна в Европе. Оставьте заявку, чтобы получить доступ к платформе или обсудить ваш
+                проект.
+            </p>
+
+            <div class="contact__details">
+                <div class="detail-item">
+                    <i data-lucide="phone-call"></i>
+                    <div>
+                        <span>Звоните нам</span>
+                        <p>+33 1 89 48 07 64</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i data-lucide="mail"></i>
+                    <div>
+                        <span>Пишите на почту</span>
+                        <p>hello@nineteen-feb-one.today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact__form-wrapper">
+            <form class="form" id="contactForm">
+                <div class="form__group">
+                    <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__group">
+                    <input type="email" name="email" class="form__input" placeholder="Email" required>
+                </div>
+                <div class="form__group">
+                    <input type="tel" name="phone" class="form__input" id="phoneInput"
+                        placeholder="Телефон (только цифры)" required>
+                </div>
+
+                <div class="form__captcha">
+                    <label class="form__label">Сколько будет <span id="captcha-task">...</span>?</label>
+                    <input type="number" id="captchaInput" class="form__input" placeholder="Ответ" required>
+                </div>
+
+                <label class="form__checkbox">
+                    <input type="checkbox" required>
+                    <span>Согласен на обработку персональных данных</span>
+                </label>
+
+                <button type="submit" class="btn btn--primary btn--full">Начать сейчас</button>
+
+                <div class="form__status" id="formStatus">
+                    <div class="status-content">
+                        <i data-lucide="check-circle" class="status-icon"></i>
+                        <h4>Запрос отправлен!</h4>
+                        <p>Мы свяжемся с вами в течение 2 минут.</p>
+                        <button type="button" class="btn btn--outline btn--sm" onclick="closeStatus()">Закрыть</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer class="footer">
@@ -310,6 +376,28 @@
             </p>
         </div>
     </footer>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <div class="logo logo--light"><span class="logo__dot"></span> Node-Onix</div>
+            <button class="menu-close" id="menuClose"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="./#home" class="mobile-nav__link">Главная</a>
+            <a href="./#tech" class="mobile-nav__link">Технологии</a>
+            <a href="./#cases" class="mobile-nav__link">Кейсы</a>
+            <a href="./#blog" class="mobile-nav__link">Блог</a>
+            <a href="./#about" class="mobile-nav__link">О нас</a>
+            <a href="./#contact" class="mobile-nav__link btn btn--primary">Запросить доступ</a>
+        </nav>
+    </div>
+    
+    <div class="cookie-popup" id="cookiePopup">
+        <div class="cookie-popup__content">
+            <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
+                    политике</a>.</p>
+            <button class="btn btn--primary btn--sm" id="cookieAccept">Принять</button>
+        </div>
+    </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
