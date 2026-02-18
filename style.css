@@ -601,7 +601,7 @@ a {
 
 .blog-card__title {
     font-family: 'Syne', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.3;
     color: var(--accent-dark);
     transition: var(--transition);
@@ -961,5 +961,53 @@ a {
 
     .contact__form-wrapper {
         padding: 2rem;
+    }
+}
+/* --- Адаптив для секции Technologies --- */
+
+@media (max-width: 992px) {
+    .tech {
+        padding: 60px 0;
+    }
+
+    .tech-matrix {
+        grid-template-columns: 1fr; /* Переход в одну колонку */
+        grid-auto-rows: auto;      /* Автоматическая высота вместо фиксированной */
+        gap: 1rem;
+    }
+
+    .tech-item--large {
+        grid-column: auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .tech-item {
+        padding: 2rem 1.5rem;
+        min-height: 220px; /* Минимальная высота для сохранения визуального веса */
+    }
+
+    .tech-item h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .tech-item p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .tech-pattern {
+        opacity: 0.05; /* Уменьшаем яркость паттерна на мобильных, чтобы не мешать тексту */
+    }
+}
+
+/* Оптимизация для самых маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .tech-item {
+        padding: 1.5rem 1.25rem;
     }
 }
