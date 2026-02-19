@@ -18,19 +18,18 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $domainTitle ?> — Экспертный консалтинг и стратегии роста
+        <?= $domainTitle ?> — Инновационные AI-решения
     </title>
 <link rel="icon"
-    href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23635BFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230A2540;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16H9L12 6L18 26L21 16H28' stroke='url(%23grad)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='28' cy='16' r='3' fill='%23635BFF' /%3E%3C/svg%3E"
-    type="image/svg+xml">
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='16' y='2' width='20' height='20' transform='rotate(45 16 2)' fill='%236d28d9'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23451a03'/%3E%3C/svg%3E">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Syne:wght@700;800&display=swap"
         rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -38,110 +37,110 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
 
     <header class="header">
         <div class="container header__container">
-            <a href="./#hero" class="logo">
-                <span class="logo__icon"></span>
+            <a href="./#home" class="logo">
+                <span class="logo__dot"></span>
                 <span class="logo__text">
                     <?= $domainTitle ?>
                 </span>
             </a>
 
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="./#hero" class="nav__link">Главная</a></li>
-                    <li><a href="./#strategies" class="nav__link">Стратегии</a></li>
-                    <li><a href="./#expertise" class="nav__link">Экспертиза</a></li>
-                    <li><a href="./#insights" class="nav__link">Инсайты</a></li>
-                    <li><a href="./#reviews" class="nav__link">Отзывы</a></li>
+                    <li><a href="./#home" class="nav__link">Главная</a></li>
+                    <li><a href="./#tech" class="nav__link">Технологии</a></li>
+                    <li><a href="./#cases" class="nav__link">Кейсы</a></li>
+                    <li><a href="./#blog" class="nav__link">Блог</a></li>
+                    <li><a href="./#about" class="nav__link">О нас</a></li>
                 </ul>
             </nav>
 
-            <a href="./#contact" class="btn btn--outline header__cta">Связаться</a>
-
-            <button class="burger" aria-label="Menu">
-                <span></span>
-            </button>
+            <div class="header__actions">
+                <a href="./#contact" class="btn btn--outline">Связаться</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
     </header>
-
-<main>
+    <main class="legal-page">
     <section class="pages">
         <div class="container">
-            <h1>Отказ от ответственности (Дисклеймер)</h1>
+            <span class="section-tag">Risk Disclosure</span>
+            <div class="legal-header">
+                <i data-lucide="alert-triangle" class="warning-icon"></i>
+                <h1>Отказ от ответственности</h1>
+            </div>
 
-            <p>
-                <strong>Общая информация:</strong> Все материалы, статьи и сведения,
-                опубликованные на сайте <strong><?= $domainTitle ?></strong>, носят исключительно
-                информационно-ознакомительный характер. Они не являются и не должны
-                рассматриваться как персональная инвестиционная рекомендация,
-                профессиональный юридический или финансовый совет, публичная оферта или призыв к совершению
-                каких-либо финансовых операций.
-            </p>
+            <div class="legal-content">
+                <div class="legal-block">
+                    <p>
+                        <strong>Общая информация:</strong> Все материалы, статьи и сведения о разработке AI-решений,
+                        опубликованные на сайте <strong><?= $domainTitle ?></strong>, носят исключительно
+                        информационно-ознакомительный характер. Они не являются и не должны
+                        рассматриваться как профессиональный технический аудит, финансовый совет или 
+                        публичная оферта. Мы предоставляем базу знаний, основанную на методологиях, доказавших эффективность, но не гарантируем их применимость в каждом конкретном случае.
+                    </p>
+                </div>
 
-            <p>
-                <strong>Отсутствие гарантий:</strong> Команда <strong><?= $domainTitle ?></strong> не дает никаких гарантий
-                относительно точности, полноты или актуальности представленной в блоге
-                информации. Любые упоминания потенциального карьерного роста, программ пассивного дохода или прошлых
-                результатов наших клиентов не гарантируют аналогичных результатов в будущем. 
-                Индивидуальные итоги вашей деятельности зависят от множества факторов, включая рыночные условия в Германии и ЕС, и могут существенно
-                отличаться от приведенных примеров.
-            </p>
+                <div class="legal-block">
+                    <p>
+                        <strong>Отсутствие гарантий:</strong> Команда <strong><?= $domainTitle ?></strong> не дает никаких гарантий
+                        относительно абсолютной точности или актуальности представленной в блоге
+                        информации. Любые упоминания инновационных технологий нового поколения или стратегий на базе инноваций не гарантируют автоматического получения прибыли или пассивного дохода. Индивидуальные результаты вашего проекта зависят от квалификации, рынка и интеграции.
+                    </p>
+                </div>
 
-            <p>
-                <strong>Ограничение ответственности:</strong> Администрация сайта <strong><?= $fullDomain ?></strong>,
-                его владельцы и аффилированные лица не несут ответственности за
-                любые прямые или косвенные убытки, решения или действия,
-                предпринятые вами на основе информации с этого ресурса. Вся
-                ответственность за использование предложенных методологий и возможные последствия
-                лежит исключительно на пользователе. Контент платформы <strong><?= $domainTitle ?></strong> собирается из
-                источников, которые считаются надежными и общедоступными на момент публикации.
-            </p>
+                <div class="legal-block highlight-block">
+                    <p>
+                        <strong>Ограничение ответственности:</strong> Администрация сайта <strong><?= $fullDomain ?></strong> 
+                        не несет ответственности за любые прямые или косвенные убытки, возникшие в результате использования наших AI-инструментов или контента. Платформа уже доступна в Европе, и вся ответственность за соблюдение локального законодательства при внедрении ботов лежит на пользователе.
+                    </p>
+                </div>
 
-            <p>
-                <strong>Предупреждение о рисках:</strong> Любая деятельность, направленная на
-                изменение финансового статуса или инвестиции в новые проекты, сопряжена с
-                определенным уровнем риска. Перед принятием
-                любых важных стратегических решений мы настоятельно рекомендуем провести
-                собственное исследование и проконсультироваться с квалифицированным
-                независимым специалистом в соответствующей области.
-            </p>
+                <div class="legal-block risk-warning">
+                    <div class="risk-warning__inner">
+                        <i data-lucide="shield-alert"></i>
+                        <p>
+                            <strong>Предупреждение о рисках:</strong> Любая деятельность, направленная на
+                            цифровую трансформацию бизнеса, сопряжена с техническими и рыночными рисками. Перед принятием
+                            важных решений мы рекомендуем получить экспертную поддержку на всех этапах и проконсультироваться с независимым специалистом.
+                        </p>
+                    </div>
+                </div>
 
-            <p>
-                <strong>Подтверждение пользователя:</strong> Продолжая использовать
-                сайт <strong><?= $domainTitle ?></strong>, вы подтверждаете, что вам исполнилось 18 лет, вы
-                действуете по собственной воле, полностью осознаете и принимаете все
-                упомянутые риски и условия данного отказа от ответственности.
-            </p>
-
-            <div class="pages-footer" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid rgba(0,0,0,0.05);">
-                <p style="font-size: 0.9rem; opacity: 0.7;">Последнее обновление: Февраль 2026</p>
+                <div class="legal-block agreement-box">
+                    <p>
+                        <strong>Подтверждение пользователя:</strong> Продолжая использовать
+                        сайт <strong><?= $domainTitle ?></strong>, вы подтверждаете, что действуете по собственной воле, 
+                        осознаете специфику работы AI-ассистентов и полностью принимаете условия данного отказа от ответственности.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
-
-
-
-     <footer class="footer">
+    <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__col">
-                <a href="./#hero" class="logo footer__logo">
-                    <span class="logo__icon"></span>
+                <a href="./#home" class="logo logo--light">
+                    <span class="logo__dot"></span>
                     <span class="logo__text">
                         <?= $domainTitle ?>
                     </span>
                 </a>
-                <p class="footer__description">Технологии нового поколения для вашего бизнеса. Переосмыслите подход к
-                    развитию вместе с экспертной поддержкой.</p>
+                <p class="footer__desc">
+                    Технологии нового поколения для автоматизации вашего бизнеса во Франции и по всему миру.
+                </p>
             </div>
 
             <div class="footer__col">
                 <h4 class="footer__title">Навигация</h4>
                 <ul class="footer__links">
-                    <li><a href="./#hero">Главная</a></li>
-                    <li><a href="./#strategies">Стратегии</a></li>
-                    <li><a href="./#expertise">Экспертиза</a></li>
-                    <li><a href="./#insights">Инсайты</a></li>
+                    <li><a href="./#home">Главная</a></li>
+                    <li><a href="./#tech">Технологии</a></li>
+                    <li><a href="./#cases">Кейсы</a></li>
+                    <li><a href="./#blog">Блог</a></li>
                 </ul>
             </div>
 
@@ -161,45 +160,57 @@ $domainTitle = ucwords(str_replace('-', ' ', $domainSlug));
             <div class="footer__col">
                 <h4 class="footer__title">Контакты</h4>
                 <ul class="footer__contact">
-                    <li><i data-lucide="phone" class="icon-sm"></i> +390697639457</li>
-                    <li><i data-lucide="mail" class="icon-sm"></i> hello@
-                        <?= $fullDomain ?>
+                    <li>
+                        <i data-lucide="phone" size="18"></i>
+                        <a href="tel:+33189480764">+33 1 89 48 07 64</a>
                     </li>
-                    <li><i data-lucide="map-pin" class="icon-sm"></i> Kurfürstendamm 21, 10719 Berlin, Germany</li>
+                    <li>
+                        <i data-lucide="mail" size="18"></i>
+                        <a href="mailto:hello@<?= $fullDomain ?>">hello@
+                            <?= $fullDomain ?>
+                        </a>
+                    </li>
+                    <li>
+                        <i data-lucide="map-pin" size="18"></i>
+                        <span>12 Rue de la Paix, 75002 Paris, France</span>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="container footer__bottom">
+        <div class="footer__bottom container">
             <p>&copy; 2026
-                <?= $domainTitle ?>. Все права защищены. Предложение активно только в странах ЕС.
+                <?= $domainTitle ?>. Все права защищены.
             </p>
         </div>
     </footer>
-<div class="mobile-menu">
-    <button class="mobile-menu__close"><i data-lucide="x"></i></button>
-    <ul class="mobile-menu__list">
-        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
-        <li><a href="./#strategies" class="mobile-menu__link">Стратегии</a></li>
-        <li><a href="./#expertise" class="mobile-menu__link">Экспертиза</a></li>
-        <li><a href="./#insights" class="mobile-menu__link">Инсайты</a></li>
-        <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
-        <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
-    </ul>
-</div>
 
-<div id="cookie-popup" class="cookie-popup">
-    <div class="cookie-popup__content">
-        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
-                политике</a>.</p>
-        <button id="cookie-accept" class="btn btn--accent-sm">Принять</button>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <div class="logo logo--light"><span class="logo__dot"></span>
+                <?= $domainTitle ?>
+            </div>
+            <button class="menu-close" id="menuClose"><i data-lucide="x"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="./#home" class="mobile-nav__link">Главная</a>
+            <a href="./#tech" class="mobile-nav__link">Технологии</a>
+            <a href="./#cases" class="mobile-nav__link">Кейсы</a>
+            <a href="./#blog" class="mobile-nav__link">Блог</a>
+            <a href="./#about" class="mobile-nav__link">О нас</a>
+            <a href="./#contact" class="mobile-nav__link btn btn--primary">Запросить доступ</a>
+        </nav>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="module" src="script.js"></script>    
- 
-    
+
+    <div class="cookie-popup" id="cookiePopup">
+        <div class="cookie-popup__content">
+            <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
+                    политике</a>.</p>
+            <button class="btn btn--primary btn--sm" id="cookieAccept">Принять</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
